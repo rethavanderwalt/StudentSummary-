@@ -23,8 +23,6 @@ public static int subjects = 6;
                                     {62.3, 48.2, 80.0, 45.9},
                                     {73.2, 48.6, 35.1, 83.1}
                                     };
-        
-        
         double[] mathGrades = assessmentGrades[0];
         double[] peGrades = assessmentGrades[1];
         double[] musicGrades = assessmentGrades[2];
@@ -69,34 +67,117 @@ public static int subjects = 6;
         double economicsAverage = economicsTotal / economicsGrades.length;
         
         
-        char[] gradeLetter = {'A', 'B', 'C', 'D', 'F'};
+        // MATHS GRADE LETTER
+        char mathsGradeLetter;
+        if (mathAverage >= 80) {
+            mathsGradeLetter = 'A';
+        }else if (mathAverage >= 70) {
+            mathsGradeLetter = 'B';
+        }else if (mathAverage >= 60) {
+            mathsGradeLetter = 'C';
+        }else if (mathAverage >= 50) {
+            mathsGradeLetter = 'D';
+        }else {
+            mathsGradeLetter = 'F';
+        }
+        
+        // Pe GRADE LETTER
+        char peGradeLetter;
+        if (peAverage >= 80) {
+            peGradeLetter = 'A';
+        }else if (peAverage >= 70) {
+            peGradeLetter = 'B';
+        }else if (peAverage >= 60) {
+            peGradeLetter = 'C';
+        }else if (peAverage >= 50) {
+            peGradeLetter = 'D';
+        }else {
+            peGradeLetter = 'F';
+        }
+        
+        // MUSIC GRADE LETTER
+        char musicGradeLetter;
+        if (musicAverage >= 80) {
+            musicGradeLetter = 'A';
+        }else if (musicAverage >= 70) {
+            musicGradeLetter = 'B';
+        }else if (musicAverage >= 60) {
+            musicGradeLetter = 'C';
+        }else if (musicAverage >= 50) {
+            musicGradeLetter = 'D';
+        }else {
+            musicGradeLetter = 'F';
+        }
+        
+         // SOCIAL STUDIES GRADE LETTER
+        char ssGradeLetter;
+        if (ssAverage >= 80) {
+            ssGradeLetter = 'A';
+        }else if (ssAverage >= 70) {
+            ssGradeLetter = 'B';
+        }else if (ssAverage >= 60) {
+            ssGradeLetter = 'C';
+        }else if (ssAverage >= 50) {
+            ssGradeLetter = 'D';
+        }else {
+            ssGradeLetter = 'F';
+        }
+        
+         // Gateway GRADE LETTER
+        char gatewayGradeLetter;
+        if (gatewayAverage >= 80) {
+            gatewayGradeLetter = 'A';
+        }else if (gatewayAverage >= 70) {
+            gatewayGradeLetter = 'B';
+        }else if (gatewayAverage >= 60) {
+            gatewayGradeLetter = 'C';
+        }else if (gatewayAverage >= 50) {
+            gatewayGradeLetter = 'D';
+        }else {
+            gatewayGradeLetter = 'F';
+        }
+        
+         // ECONIMICS GRADE LETTER
+        char economicGradeLetter;
+        if (economicsAverage >= 80) {
+            economicGradeLetter = 'A';
+        }else if (economicsAverage >= 70) {
+            economicGradeLetter = 'B';
+        }else if (economicsAverage >= 60) {
+            economicGradeLetter = 'C';
+        }else if (economicsAverage >= 50) {
+            economicGradeLetter = 'D';
+        }else {
+            economicGradeLetter = 'F';
+        }
+        
         
         System.out.println("End-of-year transcript:");
         
         // display MATHS results
         System.out.print("Maths: " + "grades " + java.util.Arrays.toString(assessmentGrades[0]));
-        System.out.format(" - the average is: " + mathAverage + "\n");
+        System.out.format(" - the average is: " + mathAverage + " = " + mathsGradeLetter + "\n");
         
         // display PE results
         System.out.print("PE: " + "grades " + java.util.Arrays.toString(assessmentGrades[1]));
-        System.out.format(" - the average is: " + peAverage + "\n");
+        System.out.format(" - the average is: " + peAverage + " = " + peGradeLetter + "\n");
         
          // display MUSIC results
         System.out.print("Music: " + "grades " + java.util.Arrays.toString(assessmentGrades[2]));
-        System.out.format(" - the average is: " + musicAverage + "\n");
+        System.out.format(" - the average is: " + musicAverage + " = " + musicGradeLetter + "\n");
         
         // display SOCIAL STUDIES results
         System.out.print("Social Studies: " + "grades " + java.util.Arrays.toString(assessmentGrades[3]));
-        System.out.format(" - the average is: " + ssAverage + "\n");
+        System.out.format(" - the average is: " + ssAverage + " = " + ssGradeLetter + "\n");
         
         // display GATEWAY results
         System.out.print("Gateway: " + "grades " + java.util.Arrays.toString(assessmentGrades[4]));
-        System.out.format(" - the average is: " + gatewayAverage + "\n");
+        System.out.format(" - the average is: " + gatewayAverage + " = " + gatewayGradeLetter + "\n");
         
         // display ECONIMICS results
         System.out.print("Economics: " + "grades " + java.util.Arrays.toString(assessmentGrades[5]));
-        System.out.format(" - the average is: " + economicsAverage + "\n");
+        System.out.format(" - the average is: " + economicsAverage + " = " + economicGradeLetter + "\n");
         
     }
 }
-    
+
